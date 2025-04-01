@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static Motion Solar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f7f7;
+      color: #222;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav .logo img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    header.hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.5em;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 1.5em;
+    }
+    .btn {
+      background-color: #00a676;
+      color: white;
+      padding: 14px 28px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #007e5e;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .service-block img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .service-block h3 {
+      margin-top: 20px;
+      font-size: 1.25rem;
+    }
+    .contact {
+      background: #00796b;
+      color: white;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <script id="opensolar_lead_capture" type="text/javascript" src="https://api.opensolar.com/api/lead_capture_widget/fd664518daf84bcca8b187de743ea4b2"></script>
+
+    <style>
+      .hero-logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 140px;
+      }
+    </style>
+
+
+    
+    
+    <style>
+      .hero-logo-sky {
+        position: absolute;
+        top: 120px;
+        left: 360px;
+        width: 200px;
+        z-index: 10;
+        opacity: 0.95;
+      }
+    </style>
+
+
+
+
+<style>
+  @media (max-width: 768px) {
+    .hero img {
+      max-width: 140px;
+      height: auto;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+    <div class="logo-text"><strong style="color:white; font-size: 1.2rem;">Static Motion Solar</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img src="images/logo.png" alt="Static Motion Solar logo" class="hero-logo-sky">
+    
+    
+    <h1>Your Power. Secure Power.</h1>
+    <p>Clean, reliable solar and battery storage solutions for Florida homeowners. Designed for performance. Installed with purpose.</p>
+    <button class="btn" onclick="renderOpenSolarWidget()">Request a Free Quote</button>
+  </header>
+
+  <section id="about">
+    <h2>Why Choose Static Motion Solar?</h2>
+    <p>We bring 17+ years of hands-on experience delivering high-quality solar and battery systems that work. We serve all of Florida with licensed, expert craftsmanship and custom energy solutions for your home.</p>
+  </section>
+
+  <section id="services">
+    <h2>What We Offer</h2>
+    <div class="services-grid">
+      <div class="service-block">
+        <img src="images/service1.jpg" alt="Solar panel installation">
+        <h3>Solar Installation</h3>
+        <p>Rooftop solar panels designed for performance and reliability.</p>
+      </div>
+      <div class="service-block">
+        <img src="images/service2.jpg" alt="Battery storage unit">
+        <h3>Battery Storage</h3>
+        <p>Clean, efficient backup storage systems for energy independence.</p>
+      </div>
+      <div class="service-block">
+        <img src="images/service3.jpg" alt="Home maintenance with solar panels">
+        <h3>Ongoing Maintenance</h3>
+        <p>Expert monitoring and support to keep your system running strong.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get Your Power</h2>
+    <p>Serving all of Florida</p>
+    <p>Call us at <a href="tel:+18087999077" style="color:white; text-decoration:underline;">(808) 799-9077</a></p>
+    <button class="btn" onclick="renderOpenSolarWidget()">Request a Free Quote</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Static Motion Solar. Built with purpose and power.<br>License Numbers: EC13014020 • CVC57258</p>
+  </footer>
+</body>
+</html>

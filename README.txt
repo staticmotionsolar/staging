@@ -1,0 +1,1 @@
+Final Static Motion Solar site: hero image, 3 service images, OpenSolar widget, license info. Netlify-ready.
